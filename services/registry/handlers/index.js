@@ -16,7 +16,6 @@ function makeRouter() {
     ...require('./packages'),
     ...require('./maintainers'),
     ...require('./namespaces'),
-    ...require('./www'),
 
     fork.get('/-/v1/login/poll/:session', auth.poll),
     fork.post('/-/v1/login', auth.login),

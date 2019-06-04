@@ -1,0 +1,19 @@
+coreApi
+    getProviders()
+        [Provider]
+              Provider.redirect
+    getProvider(name)
+    getAuthentication({remoteId, provider})
+        Authentication
+              user: User
+    signup({username, email, remoteAuth: {token, id, provider}})
+        * NOTE: bring email uniqueness check into signup
+        * NOTE: err.code
+        User
+    getTokens({for: user, page: N})
+      [objects]
+    createToken({for: user, description})
+    deleteToken({for: user, valueHashes: [String]}) -> { count }
+    resolveCLISession({session, value})
+    fetchCLISession({session}) -> { description }
+

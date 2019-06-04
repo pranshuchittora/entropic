@@ -23,11 +23,9 @@ const myMiddles = [
   require('boltzmann/middleware/logger'),
   require('boltzmann/middleware/flush-request'),
   require('boltzmann/middleware/requestid'),
-  require('./middleware/postgres'),
-  require('./middleware/transaction'),
   require('boltzmann/middleware/redis'),
-  require('./middleware/bearer-auth'),
-  require('./middleware/object-store')
+  require('./middleware/storage-api'),
+  require('./middleware/session')
 ];
 
 const server = boltzmann.make(router, myMiddles);
